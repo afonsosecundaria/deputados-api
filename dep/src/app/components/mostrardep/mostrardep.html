@@ -1,0 +1,8 @@
+<h1>Deputados</h1>
+
+<div>
+    @for(dep of deputados(); track dep.id) {
+        <p><img [src]="dep.urlFoto" alt=""></p>
+        <p>{{dep.nome}}</p>
+    }
+</div>

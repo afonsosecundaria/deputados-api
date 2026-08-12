@@ -10,6 +10,6 @@ export type Deputado = {
     email: string
 }
 
-export type DeputadoResponse = {
+export type RespostaApi = {
     dados: Deputado[]
 }
