@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;
+    width: 400px;
+    max-width: 90%;
+    margin: 0 auto 30px;
+    padding: 12px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+.deputado {
+    width: 320px;
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.deputado:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.deputado img {
+    width: 180px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.deputado h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.deputado p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.deputado a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #3498db;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.deputado a:hover {
+    background-color: #2980b9;
+}
+
+hr {
+    display: none;
+}

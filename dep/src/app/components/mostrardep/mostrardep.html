@@ -1,8 +1,67 @@
 <h1>Deputados</h1>
 
 <div>
-    @for(dep of deputados(); track dep.id) {
-        <p><img [src]="dep.urlFoto" alt=""></p>
-        <p>{{dep.nome}}</p>
+    <input
+        type="text"
+        placeholder="Pesquisar deputado..."
+        (input)="pesquisar($event)"
+    >
+</div>
+
+<br>
+
+<div>
+
+    @for (dep of deputadosFiltrados(); track dep.id) {
+
+        <div class="deputado">
+
+            <img
+                [src]="dep.urlFoto"
+                [alt]="dep.nome"
+                width="150"
+            >
+
+            <h2>{{ dep.nome }}</h2>
+
+            <p><strong>ID:</strong> {{ dep.id }}</p>
+
+            <p>
+                <strong>Partido:</strong>
+                {{ dep.siglaPartido }}
+            </p>
+
+            <p>
+                <strong>UF:</strong>
+                {{ dep.siglaUf }}
+            </p>
+
+            <p>
+                <strong>Legislatura:</strong>
+                {{ dep.idLegislatura }}
+            </p>
+
+            <p>
+                <strong>E-mail:</strong>
+                {{ dep.email }}
+            </p>
+
+            <p>
+                <a
+                    [href]="dep.url"
+                    target="_blank"
+                >
+                    Ver página do deputado
+                </a>
+            </p>
+
+        </div>
+
+        <hr>
     }
+
+    @if (deputadosFiltrados().length === 0) {
+        <p>Nenhum deputado encontrado.</p>
+    }
+
 </div>
